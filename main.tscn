@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://b44hggbyuo2k2"]
 
 [ext_resource type="Texture2D" uid="uid://c0jxc4wqm4q40" path="res://icon.svg" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://bcrvtsdemvlvu" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="Script" uid="uid://c3mkgrxjv4ju1" path="res://sprite_2d.gd" id="2_h2yge"]
 
 [node name="main" type="Node2D" unique_id=1370228944]
+script = ExtResource("1_h2yge")
 
 [node name="Label" type="Label" parent="." unique_id=1281118680]
 offset_right = 40.0
@@ -21,3 +23,5 @@ text = "klick me"
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=827951884]
 texture = ExtResource("1_0xm2m")
 script = ExtResource("2_h2yge")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
